@@ -1,6 +1,9 @@
 import React from "react";
 import type { Metadata } from 'next'
-import './globals.css'
+import '@/globals.css';
+import StyledComponentsRegistry from '../lib/AntdRegistry';
+import theme from './theme/themeConfig';
+import {ConfigProvider} from "antd";
 
 export const metadata: Metadata = {
   title: 'Amerex Compliance Flagging System',
@@ -9,8 +12,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <ConfigProvider theme={theme}>
+        <html lang="en">
+            <body>
+                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            </body>
+        </html>
+    </ConfigProvider>
   )
 }
