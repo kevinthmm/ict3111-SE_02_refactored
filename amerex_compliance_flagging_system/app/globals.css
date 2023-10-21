@@ -17,11 +17,11 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /*color: rgb(var(--foreground-rgb));*/
+  background: #F0F2F5
+}
+
+/*For debugging purposes, you can add a border to any element by adding a class of border-red-50 to it.*/
+.border-red-50{
+  border: 1px solid red;
 }
