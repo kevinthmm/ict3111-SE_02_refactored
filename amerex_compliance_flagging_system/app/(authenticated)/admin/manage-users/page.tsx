@@ -39,7 +39,7 @@ interface DataType {
 const count = 3;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
 
-export default function () {
+export default function ManageUserPage() {
     const router = useRouter();
     const [initLoading, setInitLoading] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -86,7 +86,7 @@ export default function () {
                 subTitle="Overview of all the user account in the system"
                 breadcrumb={breadcrumb}
                 extra={[
-                    <Button type={"primary"} onClick={()=>{router.push('/admin/manage-users/create-new-user')}} icon={<UserAddOutlined/>}>Add User</Button>
+                    <Button key={"1"} type={"primary"} onClick={()=>{router.push('/admin/manage-users/create-new-user')}} icon={<UserAddOutlined/>}>Add User</Button>
                 ]
                 }
             />

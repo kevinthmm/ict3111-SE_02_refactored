@@ -2,24 +2,19 @@
 
 'use client'
 import React, { useState } from 'react';
-import type { MenuProps } from 'antd';
 import {Avatar, Button, Divider, Dropdown, Layout, Menu, theme} from 'antd';
 import {Home, UserCog, Users, PanelLeftOpen, PanelRightOpen, ScrollText, LogOut} from 'lucide-react'
 import { UserOutlined } from '@ant-design/icons';
 import Image from "next/image";
 import {useRouter} from "next/navigation";
 
-
 const { Header, Content, Sider } = Layout;
-type MenuItem = Required<MenuProps>['items'][number];
 
-function TopBarWithMenu({children,}: { children: React.ReactNode }){
+function TopbarWithMenuAdmin({children,}: { children: React.ReactNode }){
     const router = useRouter();
     const [collapsed, setCollapsed] = useState(false);
     const [selectedKey, setSelectedKey] = useState((1));
-    const {
-        token: { colorBgContainer },
-    } = theme.useToken();
+    const {} = theme.useToken();
 
     return (
         <Layout className={"w-screen"} style={{ minHeight: '100vh' }}>
@@ -67,7 +62,7 @@ function TopBarWithMenu({children,}: { children: React.ReactNode }){
 
                     <Dropdown placement="bottomRight" arrow className={"mr-8 text-sm"} menu={{ items: [
                             { label: 'Edit Profile', key: '1', icon:<UserCog/>},
-                            { label: 'Logout', key: '2', icon:<LogOut/>},
+                            { label: 'Logout', key: '2', icon:<LogOut/>, onClick: () => {router.push('/login')}},
                         ]}}>
                         <div className={"flex items-center justify-center space-x-2"}>
                             <Avatar className={"flex items-center justify-center"} style={{ backgroundColor: 'gray' }} icon={<UserOutlined/>} />
@@ -83,4 +78,4 @@ function TopBarWithMenu({children,}: { children: React.ReactNode }){
     );
 }
 
-export default TopBarWithMenu;
+export default TopbarWithMenuAdmin;

@@ -57,9 +57,7 @@ export default function AdminRequestTicketPage() {
                 {/*Account Unlock Request Card*/}
                 <Card title={"Table of account unlock request tickets"} className={"min-w-full"}>
                     <AccountUnlockRequestTable/>
-
                 </Card>
-
             </div>
         </>
     )

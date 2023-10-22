@@ -68,6 +68,6 @@ const data: DataType[] = [
     },
 ];
 
-const AccountUnlockRequestTable: React.FC = () => <Table columns={columns} dataSource={data} />;
+const AccountUnlockRequestTable: React.FC = () => <Table columns={columns} dataSource={data} className={"w-full"}/>;
 
 export default AccountUnlockRequestTable;

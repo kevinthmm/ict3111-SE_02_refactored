@@ -37,7 +37,7 @@ export default function Page({ params }: { params: { userId: string } }) {
                 subTitle={params.userId}
                 breadcrumb={breadcrumb}
                 extra={[
-                    <Statistic title={<Badge status="success" text="Account Status" />} value={"Active / Locked"} />
+                    <Statistic key={"1"} title={<Badge status="success" text="Account Status" />} value={"Active / Locked"} />
                 ]}
             />
 

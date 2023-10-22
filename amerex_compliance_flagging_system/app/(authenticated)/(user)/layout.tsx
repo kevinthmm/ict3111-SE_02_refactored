@@ -1,16 +1,16 @@
 import React from "react";
 import Footer from "@/components/footer"
-import TopbarWithMenuAdmin from "@/components/topbar-with-menu-admin";
+import TopbarWithMenuUser from "@/components/topbar-with-menu-user";
 
 export default function AdminLayout({children,}: { children: React.ReactNode }) {
     return (
         <>
-            <TopbarWithMenuAdmin>
+            <TopbarWithMenuUser>
                 <main className={"grow"}>
                     {children}
                 </main>
                 <Footer/>
-            </TopbarWithMenuAdmin>
+            </TopbarWithMenuUser>
         </>
     )
 }

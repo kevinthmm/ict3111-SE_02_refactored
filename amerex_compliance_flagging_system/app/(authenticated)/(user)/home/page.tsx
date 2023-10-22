@@ -1,10 +1,9 @@
+import SiteHeader from "@/components/siteHeader";
 
 
-export default function UserLoginPage() {
+export default function UserHomePage() {
 
     return (
-        <div>
-            this is a test 2
-        </div>
+        <SiteHeader title={"Welcome back, User"} subTitle={"What would you like to do today?"}/>
     )
 }
