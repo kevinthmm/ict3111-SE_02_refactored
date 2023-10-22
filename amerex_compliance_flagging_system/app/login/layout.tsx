@@ -9,6 +9,7 @@ export default function LoginLayout({children,}: { children: React.ReactNode }) 
                 <Image className={"max-w-full h-auto aspect-[5/2]"} src={"../logoAmerexBlue.svg"} alt={"Test"} width={1080} height={240}/>
             </div>
             {children}
+            <Footer/>
         </main>
     )
 }

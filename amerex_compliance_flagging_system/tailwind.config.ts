@@ -18,6 +18,7 @@ const config: Config = {
       },
       colors: {
         // Custom colors
+        "amerex-blue": "#003EB9",
         "page-background": "#F0F2F5",
         'character-primary': '#000000D9',
         'character-secondary': '#00000073',

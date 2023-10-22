@@ -6,6 +6,7 @@ const theme: ThemeConfig = {
         fontSize: 16,
         colorPrimary: '#003EB9',
         fontFamily: 'Inter, sans-serif',
+        colorBgBase: '#F0F2F5',
     },
 };
 
